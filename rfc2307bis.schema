@@ -2,7 +2,7 @@
 # Extracted from: http://tools.ietf.org/html/draft-howard-rfc2307bis-02
 ###
 
-# builtin
+# Builtin
 #attributeType ( 1.3.6.1.1.1.1.0 NAME 'uidNumber'
 #    DESC 'An integer uniquely identifying a user in an
 #          administrative domain'
@@ -11,7 +11,7 @@
 #    SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
 #    SINGLE-VALUE )
 
-# builtin
+# Builtin
 #attributeType ( 1.3.6.1.1.1.1.1 NAME 'gidNumber'
 #    DESC 'An integer uniquely identifying a group in an
 #          administrative domain'
@@ -308,7 +308,3 @@ objectClass ( 1.3.6.1.1.1.2.18 NAME 'groupOfMembers' SUP top STRUCTURAL
     MUST cn
     MAY ( businessCategory $ seeAlso $ owner $ ou $ o $
           description $ member ) )
-
-# Needed for groups without members
-objectClass ( 1.3.6.1.4.1.5322.13.1.1 NAME 'namedObject' SUP top STRUCTURAL
-    MAY cn )
