@@ -31,6 +31,15 @@ Load the schema in the `slapd.conf`:
 include /etc/openldap/schema/rfc2307bis.schema
 ```
 
+Otherwise, to use on-line configuration (OLC), copy the `rfc2307bis.ldif` file
+into the `/etc/openldap/schema/` directory on your OpenLDAP server.
+
+Add the LDIF file with the `rootDN`:
+
+```
+ldapadd -WD <rootDN> -f /etc/openldap/schema/rfc2307bis.ldif
+```
+
 Let's create basic DB structure:
 
 ```
